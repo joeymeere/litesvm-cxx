@@ -50,7 +50,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - name: Bump to litesvm ${{ needs.check.outputs.version }}
-        run: scripts/bump.sh "${{ needs.check.outputs.version }}"
+        run: etc/scripts/bump.sh "${{ needs.check.outputs.version }}"
       - run: make lib test
       - uses: actions/upload-artifact@v4
         with:
@@ -66,7 +66,7 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@v5
-      - run: scripts/bump.sh "${{ needs.check.outputs.version }}"
+      - run: etc/scripts/bump.sh "${{ needs.check.outputs.version }}"
       - uses: actions/download-artifact@v4
         with:
           pattern: lib-*

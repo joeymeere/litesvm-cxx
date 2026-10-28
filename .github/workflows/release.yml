@@ -40,7 +40,7 @@ jobs:
           mkdir -p "dist/$name/include" "dist/$name/lib"
           cp include/litesvm.h "dist/$name/include/"
           cp libs/${{ matrix.platform }}/liblitesvm.a "dist/$name/lib/"
-          cp LICENSE NOTICE "dist/$name/"
+          cp LICENSE "dist/$name/"
           tar -C dist -czf "dist/$name.tar.gz" "$name"
       - uses: actions/upload-artifact@v4
         with:

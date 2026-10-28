@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # Move litesvm-cxx onto a new litesvm release
 #
-#   scripts/bump.sh 0.18.2
+#   etc/scripts/bump.sh 0.18.2
 #
 # litesvm declares its Agave deps with caret ranges, so ensure we use a proper agave version in the
 # case a new minor is released
 set -euo pipefail
 
 ver="${1:?usage: bump.sh <litesvm version>}"
-root="$(cd "$(dirname "$0")/.." && pwd)"
+root="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$root"
 
 lock_url="https://raw.githubusercontent.com/LiteSVM/litesvm/v${ver}/Cargo.lock"

@@ -1,6 +1,6 @@
 #   make                 build the host static library into libs/<platform>/
 #   make test            link tests/smoke.c against it and run every fixture
-#   make bump V=0.18.2   move to a new litesvm release (see scripts/bump.sh)
+#   make bump V=0.18.2   move to a new litesvm release (see etc/scripts/bump.sh)
 #   make clean
 #
 # args: CC, PLATFORM (defaults to the host), CARGO_TARGET (cross builds).
@@ -47,7 +47,7 @@ test: build/smoke
 
 bump:
 	@test -n "$(V)" || { echo "usage: make bump V=<litesvm version>"; exit 1; }
-	scripts/bump.sh $(V)
+	etc/scripts/bump.sh $(V)
 
 clean:
 	rm -rf build target
