@@ -19,7 +19,7 @@
 
 /* todo @joey come on man */
 #define LITESVM_CXX_VERSION "0.1.0"
-#define LITESVM_UPSTREAM_VERSION "0.18.1"
+#define LITESVM_UPSTREAM_VERSION "0.18.2"
 
 #ifdef __cplusplus
 extern "C" {
